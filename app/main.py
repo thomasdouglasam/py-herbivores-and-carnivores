@@ -19,7 +19,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, prey: Herbivore) -> None:
+    def bite(self, prey: "Herbivore") -> None:
         if (prey in Animal.alive and isinstance(prey, Herbivore)
                 and prey.hidden is False):
             prey.health -= 50
